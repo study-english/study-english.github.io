@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://raw.githubusercontent.com/kossnocorp/role/master/lib/jquery.role.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      examples = {
+        present_simple: [
+          {eng: "I read", rus: "Я читаю"},
+          {eng: "You read", rus: "Ты читаешь"},
+          {eng: "He reads", rus: "Он читает"},
+          {eng: "She reads", rus: "Она читает"},
+          {eng: "It reads", rus: "Оно читает"},
+          {eng: "We read", rus: "Мы читаем"},
+          {eng: "They read", rus: "Они читают"},
+
+          {eng: "I don't read", rus: "Я не читаю"},
+          {eng: "You don't read", rus: "Ты не читаешь"},
+          {eng: "He doesn't read", rus: "Он не читает"},
+          {eng: "She doesn't read", rus: "Она не читает"},
+          {eng: "It doesn't read", rus: "Оно не читает"},
+          {eng: "We don't read", rus: "Мы не читаем"},
+          {eng: "They don't read", rus: "Они не читают"},
+
+          {eng: "Do I read?", rus: "Я читаю?"},
+          {eng: "Do You read?", rus: "Ты читаешь?"},
+          {eng: "Does He read?", rus: "Он читает?"},
+          {eng: "Does She read?", rus: "Она читает?"},
+          {eng: "Does It read?", rus: "Оно читает?"},
+          {eng: "Do We read?", rus: "Мы читаем?"},
+          {eng: "Do They read?", rus: "Они читают?"},
+
+
+          {eng: "I play", rus: "Я играю"},
+          {eng: "You play", rus: "Ты играешь"},
+          {eng: "He plays", rus: "Он играет"},
+          {eng: "She plays", rus: "Она играет"},
+          {eng: "It plays", rus: "Оно играет"},
+          {eng: "We play", rus: "Мы играем"},
+          {eng: "They play", rus: "Они играют"},
+
+          {eng: "I don't play", rus: "Я не играю"},
+          {eng: "You don't play", rus: "Ты не играешь"},
+          {eng: "He doesn't play", rus: "Он не играет"},
+          {eng: "She doesn't play", rus: "Она не играет"},
+          {eng: "It doesn't play", rus: "Оно не играет"},
+          {eng: "We don't play", rus: "Мы не играем"},
+          {eng: "They don't play", rus: "Они не играют"},
+
+          {eng: "Do I play?", rus: "Я играю?"},
+          {eng: "Do You play?", rus: "Ты играешь?"},
+          {eng: "Does He play?", rus: "Он играет?"},
+          {eng: "Does She play?", rus: "Она играет?"},
+          {eng: "Does It play?", rus: "Оно играет?"},
+          {eng: "Do We play?", rus: "Мы играем?"},
+          {eng: "Do They play?", rus: "Они играют?"},
+
+
+          {eng: "I accept", rus: "Я принимаю"},
+          {eng: "You accept", rus: "Ты принимаешь"},
+          {eng: "He accepts", rus: "Он принимает"},
+          {eng: "She accepts", rus: "Она принимает"},
+          {eng: "It accepts", rus: "Оно принимает"},
+          {eng: "We accept", rus: "Мы принимаем"},
+          {eng: "They accept", rus: "Они принимают"},
+
+          {eng: "I don't accept", rus: "Я не принимаю"},
+          {eng: "You don't accept", rus: "Ты не принимаешь"},
+          {eng: "He doesn't accept", rus: "Он не принимает"},
+          {eng: "She doesn't accept", rus: "Она не принимает"},
+          {eng: "It doesn't accept", rus: "Оно не принимает"},
+          {eng: "We don't accept", rus: "Мы не принимаем"},
+          {eng: "They don't accept", rus: "Они не принимают"},
+
+          {eng: "Do I accept?", rus: "Я принимаю?"},
+          {eng: "Do You accept?", rus: "Ты принимаешь?"},
+          {eng: "Does He accept?", rus: "Он принимает?"},
+          {eng: "Does She accept?", rus: "Она принимает?"},
+          {eng: "Does It accept?", rus: "Оно принимает?"},
+          {eng: "Do We accept?", rus: "Мы принимаем?"},
+          {eng: "Do They accept?", rus: "Они принимают?"}
+        ],
+        past_simple: [
+          {eng: "I read", rus: "Я читал"},
+          {eng: "You read", rus: "Ты читал"},
+          {eng: "He read", rus: "Он читал"},
+          {eng: "She read", rus: "Она читала"},
+          {eng: "It read", rus: "Оно читало"},
+          {eng: "We read", rus: "Мы читали"},
+          {eng: "They read", rus: "Они читали"},
+
+          {eng: "I played", rus: "Я играл"},
+          {eng: "You played", rus: "Ты играл"},
+          {eng: "He played", rus: "Он играл"},
+          {eng: "She played", rus: "Она играла"},
+          {eng: "It played", rus: "Оно играло"},
+          {eng: "We played", rus: "Мы играли"},
+          {eng: "They played", rus: "Они играли"},
+
+          {eng: "I accepted", rus: "Я принимал"},
+          {eng: "You accepted", rus: "Ты принимал"},
+          {eng: "He accepted", rus: "Он принимал"},
+          {eng: "She accepted", rus: "Она принимала"},
+          {eng: "It accepted", rus: "Оно принимало"},
+          {eng: "We accepted", rus: "Мы принимали"},
+          {eng: "They accepted", rus: "Они принимали"}
+        ],
+        future_simple: [
+          {eng: "I will read", rus: "Я буду читать"},
+          {eng: "You will read", rus: "Ты будешь читать"},
+          {eng: "He will read", rus: "Он будет читать"},
+          {eng: "She will read", rus: "Она будет читать"},
+          {eng: "It will read", rus: "Оно будет читать"},
+          {eng: "We will read", rus: "Мы будем читать"},
+          {eng: "They will read", rus: "Они будут играть"},
+
+          {eng: "I will play", rus: "Я буду играть"},
+          {eng: "You will play", rus: "Ты будешь играть"},
+          {eng: "He will play", rus: "Он будет играть"},
+          {eng: "She will play", rus: "Она будет играть"},
+          {eng: "It will play", rus: "Оно будет играть"},
+          {eng: "We will play", rus: "Мы будем играть"},
+          {eng: "They will play", rus: "Они будут играть"},
+
+          {eng: "I will accept", rus: "Я буду принимать"},
+          {eng: "You will accept", rus: "Ты будешь принимать"},
+          {eng: "He will accept", rus: "Он будет принимать"},
+          {eng: "She will accept", rus: "Она будет принимать"},
+          {eng: "It will accept", rus: "Оно будет принимать"},
+          {eng: "We will accept", rus: "Мы будем принимать"},
+          {eng: "They will accept", rus: "Они будут принимать"}
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand logo" href="#">Learning English</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Тренер грамматики</a></li>
+            <li><a href="#">Словарь</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="page-header">
+        <h2>Present Simple: грамматический тренажер</h1>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+            <span class="sr-only">Завершено: <span role="completed-percent">0</span>%</span>
+          </div>
+        </div>
+        <span class="text-muted">Решено: <span role="correct-answers-count">0</span> из <span role="total-questions"></span></span>
+
+        <h2 class="lead" role="source"></h2>
+        <form action="#" class="wrapper" role="form test-translation">
+          <input type="text" class="form-control" name="translate" role="translate" autocomplete="off" />
+          <br/>
+          <div class="btn btn-default" role="new-example">Еще</div>
+          <div class="btn btn-default" role="need-help">Подсказка</div>
+          <span class="notifications">
+            <strong>
+              <span class="notifier text-danger" role="wrong-badge">Не верно</span>
+              <span class="notifier text-success" role="right-badge">Верно</span>
+              <span class="notifier helper" role="helper">Верный ответ: <span role="helper-content"></span></span>
+            </strong>
+          </span>
+        </form>
+      </div>
+      <p class="text-muted"><strong>Подсказка 1.</strong> Заполнив строку ввода, нажмите клавишу <span class="text-primary">Enter</span>, чтобы проверить ваш ответ.</p>
+      <p class="text-muted"><strong>Подсказка 2.</strong> Нажмите кнопку <span class="text-primary">"Еще"</span> или повторно клавишу <span class="text-primary">Enter</span>, что-бы получить новую фразу для перевода. </p>
+      <p class="text-muted"><strong>Подсказка 3.</strong> Перевод можно вводить как заглавными, так и маленькими буквами.</p>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Learn English easy!</p>
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+      function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      show_popover = function(selector, content) {
+        var target = $(selector)
+        target.data('content', content);
+        target.popover({
+          placement: 'top',
+          trigger: 'manual',
+          content: content
+        });
+        target.popover('show');
+        var popover = target.data('bs.popover');
+        if(popover) {
+          popover.options.content = content;
+          popover.tip().find('.popover-content').html(content);
+        }
+        // fix position
+
+        var tip = target.data('bs.popover').tip();
+        var y_position = target.position().top - tip.height() - 3;
+        tip.css('top', y_position);
+      }
+
+      example = {};
+      status = null;
+      example_collection = examples['present_simple'];
+      total_questions = example_collection.length;
+      correct_answers_count = 0;
+      current_question_num = null;
+      helper_was_used = false;
+      last_answer = null;
+
+      $(function(){
+        var build_new_example = function() {
+          current_question_num = getRandomInt(0, example_collection.length - 1)
+          example = example_collection[current_question_num];
+
+          status = 'ready';
+          $('@translate').popover('hide');
+          $('@source').html('<b>Переведи это:</b> ' + example['rus']);
+          $('@helper').hide();
+          $('@right-badge').hide();
+          $('@wrong-badge').hide();
+          $('@translate').val('');
+          $('@translate').popover('hide');
+          $('@translate').focus();
+
+          $('@total-questions').html(total_questions);
+        }
+
+        var is_eq_str = function(str1, str2) {
+          return $.trim(str1.toLowerCase()) == $.trim(str2.toLowerCase())
+        }
+
+        build_new_example();
+
+        var next_example = function() {
+          helper_was_used = false;
+          build_new_example();
+        }
+
+        $(document).on('click', '@new-example', function(e){
+          var current_answer = $('@translate').val();
+          if(is_eq_str(example['eng'], current_answer) && status != 'right answer') {
+            show_popover('@translate', 'Для проверки результата необходимо нажать клавишу Enter. Прочитайте подсказки снизу.');
+            $('@translate').focus();
+            return false;
+          }
+
+          next_example();
+        });
+
+        $(document).on('click', '@need-help', function(e){
+          helper_was_used = true;
+          $('@helper-content').html(example['eng']);
+          $('@right-badge').hide();
+          $('@wrong-badge').hide();
+          $('@helper').show();
+          $('@translate').focus();
+        });
+
+        $(document).on('input', '@translate', function(e){
+          $('@translate').popover('hide');
+        });
+
+        $(document).on('submit', '@test-translation', function(e){
+          var current_answer = $('@translate').val();
+
+          if (status == 'right answer') {
+            next_example();
+            return false;
+          }
+
+          if(!current_answer.match(/[a-zA-Z' ]/)) {
+            show_popover('@translate', 'Проверьте язык ввода, не все символы из английского алфавита');
+            return false;
+          }
+
+          if(!helper_was_used && status == 'ready' && is_eq_str(example['eng'], current_answer)) {
+            correct_answers_count = correct_answers_count + 1;
+            $('@progressbar').width(Math.round(correct_answers_count / total_questions * 100) + '%');
+            $('@correct-answers-count').html(correct_answers_count);
+            example_collection.splice(current_question_num, 1);
+          }
+
+          if(status == 'wrong answer' && last_answer == current_answer) {
+            show_popover('@translate', 'Введите правильный результат для продолжения');
+          }
+
+
+          if (is_eq_str(example['eng'], current_answer)) {
+            status = 'right answer';
+            $('@translate').popover('hide');
+            $('@helper').hide();
+            $('@right-badge').show();
+            $('@wrong-badge').hide();
+          } else {
+            status = 'wrong answer';
+            $('@helper-content').html(example['eng']);
+            $('@helper').show();
+            $('@right-badge').hide();
+            $('@wrong-badge').show();
+          }
+
+          last_answer = current_answer;
+          return false;
+        });
+      });
+    </script>
+  </body>
+</html>
